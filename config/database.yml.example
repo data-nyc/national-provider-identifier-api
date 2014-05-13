@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: health-provider-api_development
+  pool: 5
+  username: health-provider-api
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: health-provider-api_test
+  pool: 5
+  username: health-provider-api
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: health-provider-api_production
+  pool: 5
+  username: health-provider-api
+  password:
