@@ -8,6 +8,7 @@ gem 'pry'
 gem 'puma'
 gem 'rails', '4.1.1'
 gem 'redis'
+gem 'redis-rails'
 gem 'shoulda-matchers'
 gem 'swagger-docs'
 
