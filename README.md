@@ -3,6 +3,10 @@ National Provider Identifier (NPI) API
 
 This project strives to structure the National Provider Identifier Standard dataset and make a realtime available api for people using the information in their applications.  More information can be found via the documentation of this API and the links section below.
 
+## Status
+
+![Travis CI](https://travis-ci.org/data-nyc/national-provider-identifier-api.svg)
+
 ## Getting Started
 
 Visit the [api website](http://health-provider-api.herokuapp.com) to learn more about the endpoints available.
