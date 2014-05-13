@@ -13,7 +13,7 @@
               "paramType": "query",
               "name": "entity",
               "type": "integer",
-              "description": "Entity (individual=1, organization=2)",
+              "description": "Individual=1, Organization=2",
               "required": false
             },
             {

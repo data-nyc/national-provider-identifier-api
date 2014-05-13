@@ -8,7 +8,7 @@ class ProvidersController < ApplicationController
 
   swagger_api :index do
     summary "Search Multiple Providers"
-    param :query, :entity, :integer, :optional, "Entity (individual=1, organization=2)"
+    param :query, :entity, :integer, :optional, "Individual=1, Organization=2"
     param :query, :offset, :integer, :optional, "Pagination offset"
     param :query, :page,   :integer, :optional, "Pagination page"
   end
