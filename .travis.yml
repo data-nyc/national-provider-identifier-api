@@ -11,5 +11,5 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
-  - cp config/database.yml.example config/database.yml
+  - cp config/database.travis.yml config/database.yml
   - psql -c 'create database health_provider_api_test' -U postgres
