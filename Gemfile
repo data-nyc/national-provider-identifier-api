@@ -4,25 +4,24 @@ gem 'active_model_serializers'
 gem 'pg'
 gem 'rails', '4.1.1'
 
-gem 'rspec-rails', group: [:development, :test]
 
-gem :production do
+group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
 
-gem :production, :development do
+group :production, :development do
   gem 'puma'
-  gem 'redis'
   gem 'redis-rails'
 end
 
-gem :development do
+group :development do
   gem 'pry'
   gem 'swagger-docs'
 end
 
-gem :development, :test do
+group :development, :test do
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
 

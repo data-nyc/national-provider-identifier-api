@@ -4,14 +4,7 @@ class ProvidersController < ApplicationController
   PAGE_OFFSET = 0
   PAGE_SIZE = 50
 
-  swagger_controller :providers, "Providers"
-
-  swagger_api :index do
-    summary "Search Multiple Providers"
-    param :query, :entity, :integer, :optional, "Individual=1, Organization=2"
-    param :query, :offset, :integer, :optional, "Pagination offset"
-    param :query, :page,   :integer, :optional, "Pagination page"
-  end
+  include ProvidersControllerSwaggerDocs
 
   # GET /providers
   # GET /providers.json
@@ -25,11 +18,6 @@ class ProvidersController < ApplicationController
     else
       head 400
     end
-  end
-
-  swagger_api :show do
-    summary "Search Single Provider"
-    param :path, :id, :string, :required, "National Provider Identity (npi)"
   end
 
   # GET /providers/1

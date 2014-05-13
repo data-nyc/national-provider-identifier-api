@@ -36,9 +36,6 @@ GEM
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.6.9)
-    jbuilder (1.5.3)
-      activesupport (>= 3.0.0)
-      multi_json (>= 1.2.0)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -141,14 +138,12 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  jbuilder (~> 1.2)
   newrelic_rpm
   pg
   pry
   puma
   rails (= 4.1.1)
   rails_12factor
-  redis
   redis-rails
   rspec-rails
   sdoc
