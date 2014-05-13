@@ -1,4 +1,3 @@
-
 class ProvidersController < ApplicationController
   respond_to :json
 
