@@ -21,7 +21,7 @@ class ProvidersController < ApplicationController
         @providers = Provider.where(entity: params[:entity].to_s).offset(params[:offset] || PAGE_OFFSET).limit(params[:page] || PAGE_SIZE)
       end
 
-      respond_with @providers
+      respond_with ActiveModel::ArraySerializer.new(@providers, each_serializer: ProviderSerializer)
     else
       head 400
     end

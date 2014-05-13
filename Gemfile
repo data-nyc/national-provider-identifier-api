@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'active_model_serializers'
 gem 'jbuilder', '~> 1.2'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'pry'
 gem 'puma'
 gem 'rails', '4.1.1'
+gem 'redis'
 gem 'shoulda-matchers'
 gem 'swagger-docs'
 
