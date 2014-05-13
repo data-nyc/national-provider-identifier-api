@@ -5,7 +5,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'pry'
 gem 'puma'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.1'
 gem 'shoulda-matchers'
 gem 'swagger-docs'
 
