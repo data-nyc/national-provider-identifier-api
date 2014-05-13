@@ -6,4 +6,4 @@ Swagger::Docs::Config.register_apis({
     clean_directory: false,
     formatting: :pretty
   }
-})
+}) if Rails.env.development?
