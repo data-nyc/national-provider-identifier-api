@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509031612) do
+ActiveRecord::Schema.define(version: 20140513153819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "data_sources", force: true do |t|
+    t.string   "name",        limit: 1024
+    t.string   "transformer"
+    t.text     "description"
+    t.string   "status",      limit: 25,   default: "DEFINED"
+    t.string   "encoding",    limit: 25,   default: "utf8"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "data_sources", ["name"], name: "index_data_sources_on_name", unique: true, using: :btree
+  add_index "data_sources", ["status"], name: "index_data_sources_on_status", using: :btree
+  add_index "data_sources", ["transformer"], name: "index_data_sources_on_transformer", using: :btree
 
   create_table "providers", force: true do |t|
     t.string   "npi",                     limit: 10, null: false
