@@ -12,7 +12,7 @@ module ProvidersControllerSwaggerDocs
 
       app.send :swagger_api, :show do
         summary "Search Single Provider"
-        param :path, :id, :string, :required, "National Provider Identity (npi)"
+        param :path, :id, :string, :required, "National Provider Identity"
       end
     end
   end
