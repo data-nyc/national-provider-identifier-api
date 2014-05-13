@@ -43,7 +43,7 @@
           "summary": "Search Single Provider",
           "parameters": [
             {
-              "paramType": "query",
+              "paramType": "path",
               "name": "id",
               "type": "string",
               "description": "National Provider Identity (npi)",
