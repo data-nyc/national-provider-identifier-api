@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def ping
-    PONG
+    render text: PONG
   end
 
   def error_404
