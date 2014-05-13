@@ -7,25 +7,51 @@
       "path": "v1/providers.json",
       "operations": [
         {
-          "summary": "Search Providers",
+          "summary": "Search Multiple Providers",
           "parameters": [
-            {
-              "paramType": "query",
-              "name": "npi",
-              "type": "string",
-              "description": "National Provider Identity",
-              "required": false
-            },
             {
               "paramType": "query",
               "name": "entity",
               "type": "integer",
-              "description": "Entity (Individual=1, Organization=2)",
+              "description": "Entity (individual=1, organization=2)",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "offset",
+              "type": "integer",
+              "description": "Pagination offset",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Pagination page",
               "required": false
             }
           ],
           "method": "get",
           "nickname": "Providers#index"
+        }
+      ]
+    },
+    {
+      "path": "v1/providers/{id}.json",
+      "operations": [
+        {
+          "summary": "Search Single Provider",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "id",
+              "type": "string",
+              "description": "National Provider Identity (npi)",
+              "required": false
+            }
+          ],
+          "method": "get",
+          "nickname": "Providers#show"
         }
       ]
     }

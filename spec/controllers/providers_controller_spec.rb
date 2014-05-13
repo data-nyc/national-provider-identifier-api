@@ -9,31 +9,35 @@ describe ProvidersController do
       end
     end
 
-    describe "when given an npi search criteria" do
-      it "is a 200 OK" do
-        get :index, {format: :json, npi: "1588667638"}
-        expect(response.status).to eq(200)
-      end
-
-      it "limits on the npi" do
-        incorrect = Provider.create(npi: "1111111111", entity: 1, legal_name: "BAD RESULT")
-        provider = Provider.create(npi: "1588667638", entity: 2, legal_name: "PILCHER")
-        get :index, {format: :json, npi: "1588667638"}
-        expect(assigns(:providers)).to eq([provider])
-      end
-    end
-
     describe "when given an entity search criteria" do
       it "is a 200 OK" do
         get :index, {format: :json, entity: 1}
         expect(response.status).to eq(200)
       end
 
-      it "limits on the npi result" do
+      it "filters by the entity" do
         incorrect = Provider.create(npi: "1111111111", entity: 2, legal_name: "BAD RESULT")
         provider = Provider.create(npi: "1588667638", entity: 1, legal_name: "PILCHER")
-        get :index, {format: :json, npi: "1588667638"}
-        expect(assigns(:providers)).to eq([provider])
+
+        get :index, {format: :json, entity: "1"}
+        expect(assigns(:providers)).to match_array([provider])
+      end
+    end
+  end
+
+  describe "GET show" do
+    describe "when given an id" do
+      it "is a 200 OK" do
+        get :show, {format: :json, id: "1588667638"}
+        expect(response.status).to eq(200)
+      end
+
+      it "finds by the id" do
+        incorrect = Provider.create(npi: "1111111111", entity: 1, legal_name: "BAD RESULT")
+        provider = Provider.create(npi: "1588667638", entity: 2, legal_name: "PILCHER")
+
+        get :show, {format: :json, id: "1588667638"}
+        expect(assigns(:provider)).to eq(provider)
       end
     end
   end
