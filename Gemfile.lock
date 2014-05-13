@@ -43,6 +43,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.0)
+    newrelic_rpm (3.8.0.218)
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -111,6 +112,7 @@ PLATFORMS
 
 DEPENDENCIES
   jbuilder (~> 1.2)
+  newrelic_rpm
   pg
   pry
   puma

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jbuilder', '~> 1.2'
+gem 'newrelic_rpm'
 gem 'pg'
 gem 'pry'
 gem 'puma'
