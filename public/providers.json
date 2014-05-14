@@ -46,7 +46,7 @@
               "paramType": "path",
               "name": "id",
               "type": "string",
-              "description": "National Provider Identity",
+              "description": "National Provider Identifier",
               "required": true
             }
           ],
