@@ -8,11 +8,11 @@ class DataSourcesController < ApplicationController
 
   def index
     @data_sources = DataSource.offset(params[:offset] || PAGE_OFFSET).limit(params[:page] || PAGE_SIZE)
-    response_with @data_sources
+    respond_with @data_sources
   end
 
   def show
-    @data_source = DataSource.find(params[:id])
-    response_with @data_source
+    @data_source = DataSource.where(id: params[:id]).first
+    respond_with @data_source
   end
 end

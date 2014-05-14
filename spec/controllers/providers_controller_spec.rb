@@ -3,14 +3,14 @@ require "spec_helper"
 describe ProvidersController do
   describe "GET index" do
     describe "when no search params are provided" do
-      it "is a 400 Bad Request" do
+      it "responds with 400 Bad Request" do
         get :index, {format: :json}
         expect(response.status).to eq(400)
       end
     end
 
     describe "when given an entity search criteria" do
-      it "is a 200 OK" do
+      it "responds with 200 OK" do
         get :index, {format: :json, entity: 1}
         expect(response.status).to eq(200)
       end
@@ -27,7 +27,7 @@ describe ProvidersController do
 
   describe "GET show" do
     describe "when given an id" do
-      it "is a 200 OK" do
+      it "responds with 200 OK" do
         get :show, {format: :json, id: "1588667638"}
         expect(response.status).to eq(200)
       end

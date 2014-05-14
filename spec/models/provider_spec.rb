@@ -11,15 +11,15 @@ describe Provider do
 
     describe "when given no npi" do
       it "fails on presence" do
-        Provider.new.should validate_presence_of(:npi)
+        expect(Provider.new).to validate_presence_of(:npi)
       end
 
       it "fails on uniqueness" do
-        Provider.new.should validate_uniqueness_of(:npi)
+        expect(Provider.new).to validate_uniqueness_of(:npi)
       end
 
       it "fails on length" do
-        Provider.new.should ensure_length_of(:npi)
+        expect(Provider.new).to ensure_length_of(:npi)
       end
     end
 
@@ -32,13 +32,13 @@ describe Provider do
     describe "when given an npi that has already been saved" do
       it "fails on uniqueness" do
         Provider.create(parameters)
-        Provider.new(parameters).should validate_uniqueness_of(:npi)
+        expect(Provider.new(parameters)).to validate_uniqueness_of(:npi)
       end
     end
 
     describe "when given no entity" do
       it "fails on presence" do
-        Provider.new.should validate_presence_of(:entity)
+        expect(Provider.new).to validate_presence_of(:entity)
       end
     end
 

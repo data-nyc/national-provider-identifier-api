@@ -2,11 +2,16 @@ require "csv"
 require "open-uri"
 
 class DataSource < ActiveRecord::Base
+  DEFINED = "DEFINED"
+  READY_TO_PROCESS = "READY-TO-PROCESS"
+  COMPLETED = "COMPLETED"
+
+  TRANSFORMERS = ["CmsDataTransformer"]
+
   class DataSourceTransformerInvalidError < StandardError; end
 
   validates :name,        presence: true, uniqueness: true, length:{maximum: 1024}
-  validates :status,      presence: true
-  validates :transformer, presence: true
+  validates :transformer, presence: true, inclusion: {in: TRANSFORMERS}
 
   after_find   :apply_transformer
   after_create :apply_transformer
