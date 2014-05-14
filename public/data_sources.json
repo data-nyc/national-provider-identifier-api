@@ -1,0 +1,106 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://health-provider-api.herokuapp.com/",
+  "apis": [
+    {
+      "path": "data_sources/index.json",
+      "operations": [
+        {
+          "summary": "List Multiple Data Sources",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "status",
+              "type": "string",
+              "description": "DEFINED, READY-TO-PROCESS, COMPLETE",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "offset",
+              "type": "integer",
+              "description": "Pagination offset",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Pagination page",
+              "required": false
+            }
+          ],
+          "method": "get",
+          "nickname": "DataSources#index"
+        }
+      ]
+    },
+    {
+      "path": "data_sources/show.json",
+      "operations": [
+        {
+          "summary": "Show Single Data Source",
+          "parameters": [
+
+          ],
+          "method": "get",
+          "nickname": "DataSources#show"
+        }
+      ]
+    },
+    {
+      "path": "v1/data_sources.json",
+      "operations": [
+        {
+          "summary": "List Multiple Data Sources",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "status",
+              "type": "string",
+              "description": "DEFINED, READY-TO-PROCESS, COMPLETE",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "offset",
+              "type": "integer",
+              "description": "Pagination offset",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Pagination page",
+              "required": false
+            }
+          ],
+          "method": "get",
+          "nickname": "DataSources#index"
+        }
+      ]
+    },
+    {
+      "path": "v1/data_sources/{id}.json",
+      "operations": [
+        {
+          "summary": "Show Single Data Source",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "string",
+              "description": "Data Source ID",
+              "required": true
+            }
+          ],
+          "method": "get",
+          "nickname": "DataSources#show"
+        }
+      ]
+    }
+  ],
+  "resourcePath": "data_sources"
+}

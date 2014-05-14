@@ -4,6 +4,10 @@
   "basePath": "http://health-provider-api.herokuapp.com/",
   "apis": [
     {
+      "path": "data_sources.{format}",
+      "description": "Data Sources"
+    },
+    {
       "path": "providers.{format}",
       "description": "Providers"
     }

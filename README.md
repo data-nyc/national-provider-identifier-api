@@ -36,4 +36,3 @@ The National Provider Identifier API is released under the [MIT License](http://
 ## Changes
 
 * 2014-05-13 - Started base site on heroku.  Testing the waters and setting up initial functionality.
-* 
